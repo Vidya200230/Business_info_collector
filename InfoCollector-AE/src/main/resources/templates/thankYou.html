@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thank You</title>
+    <style>
+        .thank-you-container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .thank-you-container h2 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .thank-you-container p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<div class="thank-you-container">
+    <h2>Thank You for Submitting Your Business Details</h2>
+    <h3>Preview of Your Submission:</h3>
+    <p><strong>Business Name:</strong> <span th:text="${business.businessName}"></span></p>
+    <p><strong>Description:</strong> <span th:text="${business.description}"></span></p>
+    <p><strong>Category:</strong> <span th:text="${business.category}"></span></p>
+    <p><strong>Amount:</strong> <span th:text="${business.amount}"></span></p>
+
+    <!-- Button to return to previous page -->
+    <a href="/businessForm" class="btn">Go Back</a>
+</div>
+</body>
+</html>
